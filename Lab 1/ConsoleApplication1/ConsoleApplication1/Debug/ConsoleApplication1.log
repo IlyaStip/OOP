@@ -1,15 +1,16 @@
-﻿Сборка начата 02.09.2015 21:13:35.
+﻿Сборка начата 03.09.2015 21:49:48.
      1>Проект "d:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ConsoleApplication1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ConsoleApplication1.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ConsoleApplication1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Abiturient.cpp ConsoleApplication1.cpp
+         Abiturient.cpp
+         Создание кода...
+         Компиляция...
          ConsoleApplication1.cpp
-     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(19): warning C4101: s_id: неиспользованная локальная переменная
-     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(29): error C4700: использована неинициализированная локальная переменная "s_lastName"
-     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(33): error C4700: использована неинициализированная локальная переменная "s_name"
-     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(37): error C4700: использована неинициализированная локальная переменная "s_patronymic"
-     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(42): error C4700: использована неинициализированная локальная переменная "s_address"
+     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(57): error C2664: "void Abiturient::set_mark(int [])": невозможно преобразовать аргумент 1 из "int" в "int []"
+                 Для преобразования из целого типа в указатель требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции
+         Создание кода...
      1>Сборка проекта "d:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" завершена (целевые объекты Build) с ошибкой.
 
 Ошибка сборки.
 
-Затраченное время: 00:00:00.51
+Затраченное время: 00:00:01.02
