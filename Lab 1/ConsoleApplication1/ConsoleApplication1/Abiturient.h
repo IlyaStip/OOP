@@ -9,9 +9,10 @@ class Abiturient{
 	std::string patronymic;
 	std::string address;
 	int phone;
-	int mark[4];
+	int mark;
 public:
 	Abiturient();
+	~Abiturient();
 	void set_id(int);
 	void set_lastName(std::string);
 	void set_name(std::string);
@@ -26,7 +27,7 @@ public:
 	std::string get_patronymic();
 	std::string get_address();
 	int get_phone();
-	int get_mark(int i);
+	int get_mark();
 
 	void get_BadAbiturient();
 	void get_ValAbiturient(int);

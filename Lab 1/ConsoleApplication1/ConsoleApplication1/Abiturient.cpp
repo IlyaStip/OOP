@@ -1,8 +1,16 @@
 #include "stdafx.h"
+#include <string>
 #include "Abiturient.h"
 
 Abiturient::Abiturient()
 {
+	id = NULL;
+	lastName = "";
+	name = "";
+	patronymic = "";
+	address = "";
+	phone = NULL;
+	mark = NULL;
 }
 void Abiturient::set_id(int ID){
 	id = ID;
@@ -23,7 +31,7 @@ void Abiturient::set_phone(int PHONE){
 	phone = PHONE;
 }
 void Abiturient::set_mark(int MARK){
-		mark[i] = MARK;
+		mark = MARK;
 }
 int Abiturient::get_id(){
 	return Abiturient::id;
@@ -43,6 +51,15 @@ std::string Abiturient::get_address(){
 int Abiturient::get_phone(){
 	return Abiturient::phone;
 }
-int Abiturient::get_mark(int I){
-	return Abiturient::mark[I];
+int Abiturient::get_mark(){
+	return Abiturient::mark;
+}
+void Abiturient::get_BadAbiturient(){
+	std::cout << "id" << " Фамилия" << "\tИмя" << "\tОтчество" << "\tБалл" << std::endl;
+	if (Abiturient::get_mark() < 100){
+		std::cout << Abiturient::get_id()<< "   " << Abiturient::get_lastName() << "\t" << Abiturient::get_name() << "\t" << Abiturient::get_patronymic() << "\t" << Abiturient::get_mark() << std::endl;
+	}
+}
+Abiturient::~Abiturient(){
+	std::cout << "Деструктор" << std::endl;
 }

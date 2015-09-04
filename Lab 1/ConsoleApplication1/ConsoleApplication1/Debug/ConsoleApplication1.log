@@ -1,16 +1,15 @@
-﻿Сборка начата 03.09.2015 21:49:48.
-     1>Проект "d:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 04.09.2015 20:11:06.
+     1>Проект "D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ConsoleApplication1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Abiturient.cpp ConsoleApplication1.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ConsoleApplication1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Abiturient.cpp
          Abiturient.cpp
-         Создание кода...
-         Компиляция...
-         ConsoleApplication1.cpp
-     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(57): error C2664: "void Abiturient::set_mark(int [])": невозможно преобразовать аргумент 1 из "int" в "int []"
-                 Для преобразования из целого типа в указатель требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции
-         Создание кода...
-     1>Сборка проекта "d:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" завершена (целевые объекты Build) с ошибкой.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\Debug\ConsoleApplication1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\Debug\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\Debug\ConsoleApplication1.lib" /MACHINE:X86 Debug\Abiturient.obj
+         Debug\ConsoleApplication1.obj
+         Debug\stdafx.obj
+         ConsoleApplication1.vcxproj -> D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\Debug\ConsoleApplication1.exe
+     1>Сборка проекта "D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" завершена (целевые объекты Build).
 
-Ошибка сборки.
+Сборка успешно завершена.
 
-Затраченное время: 00:00:01.02
+Затраченное время: 00:00:00.67

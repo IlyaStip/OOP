@@ -20,7 +20,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	Abiturient *abitur = new Abiturient[n];
 	for (int i = 0; i < n; i++){
 		int s_phone;
-		int s_mark[4];
+		int s_mark;
 		std::string s_lastName;
 		std::string s_name;
 		std::string s_patronymic;
@@ -50,27 +50,15 @@ int _tmain(int argc, _TCHAR* argv[])
 		std::cin >> s_phone;
 		abitur[i].set_phone(s_phone);
 
-		std::cout << "Баллы: " << std::endl;
-		for (int i = 0; i < 2; i++){
-			std::cout << i+1 << "-го профильного предмета: " << std::endl;
-			std::cin >> s_mark[i];
-			int tmp = s_mark[i];
-			abitur[i].set_mark(tmp);
-		}
-		std::cout << "По русскому/белорусскому языку: " << std::endl;
-		std::cin >> s_mark[2];
-		std::cout << "Аттестат: " << std::endl;
-		std::cin >> s_mark[3];
-		
+		std::cout << "Балл: " << std::endl;
+		std::cin >> s_mark;
+		abitur[i].set_mark(s_mark);
+
+		abitur[i].get_BadAbiturient();
 
 	}
-	std::cout << "Список абитуриентов, имеющих неудовлетворительные оценки: " << std::endl;
-	std::cout << "id" << " Фамилия" << "\tИмя" << "\tОтчество" << "\tГород" << "\tТелефон" << "\tЦТ" << " ЦТ" << " ЦТ" << " Аттестат" << std::endl;
-	for (int i = 0; i < n; i++){
-		if ((abitur[i].get_mark(0) < 20) || (abitur[i].get_mark(1) < 20) || (abitur[i].get_mark(2) < 15)){
-			std::cout << abitur[i].get_id() << " " << abitur[i].get_lastName() << "\t" << abitur[i].get_name() << "\t" << abitur[i].get_patronymic() << "\t" << abitur[i].get_address() << "\t" << abitur[i].get_phone() << "\t" << abitur[i].get_mark(0) << "\t" << abitur[i].get_mark(1) << "\t" << abitur[i].get_mark(2) << "\t" << abitur[i].get_mark(3) << std::endl;
-		}
-	}
+
+	delete [] abitur;
 	system("pause");
 	return 0;
 }
