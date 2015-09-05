@@ -1,8 +1,21 @@
-﻿Сборка начата 04.09.2015 20:40:33.
+﻿Сборка начата 05.09.2015 17:49:44.
      1>Проект "D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ConsoleApplication1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Abiturient.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ConsoleApplication1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Abiturient.cpp ConsoleApplication1.cpp
+         ConsoleApplication1.cpp
+     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(55): warning C4018: <: несоответствие типов со знаком и без знака
+     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(62): warning C4258: i: определение из цикла for игнорируется; используется определение из внешней области видимости
+                 d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(55): пропуск определения "i"
+                 d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(23): используется определение "i"
+     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(76): warning C4258: i: определение из цикла for игнорируется; используется определение из внешней области видимости
+                 d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(55): пропуск определения "i"
+                 d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(23): используется определение "i"
+     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(90): warning C4258: i: определение из цикла for игнорируется; используется определение из внешней области видимости
+                 d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(55): пропуск определения "i"
+                 d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(23): используется определение "i"
+     1>d:\учёба\2 курс\ооп\лабы\oop\lab 1\consoleapplication1\consoleapplication1\consoleapplication1.cpp(27): warning C4101: s_mark_s: неиспользованная локальная переменная
          Abiturient.cpp
+         Создание кода...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\Debug\ConsoleApplication1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\Debug\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Учёба\2 курс\ООП\Лабы\OOP\Lab 1\ConsoleApplication1\Debug\ConsoleApplication1.lib" /MACHINE:X86 Debug\Abiturient.obj
          Debug\ConsoleApplication1.obj
@@ -12,4 +25,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.96
+Затраченное время: 00:00:02.33
