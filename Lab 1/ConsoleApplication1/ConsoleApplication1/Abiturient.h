@@ -16,7 +16,7 @@ public:
 	Abiturient(int, std::string, std::string, std::string, std::string, std::string, int, int);
 	Abiturient();
 	~Abiturient();
-	Abiturient(const Abiturient & obj);
+	Abiturient(const Abiturient &);
 	void set_id(int);
 	void set_lastName(std::string);
 	void set_name(std::string);
