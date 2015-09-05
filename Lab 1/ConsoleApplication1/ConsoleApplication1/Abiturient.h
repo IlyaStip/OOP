@@ -10,6 +10,7 @@ class Abiturient{
 	std::string address;
 	int phone;
 	int mark;
+	int bal;
 public:
 	Abiturient();
 	~Abiturient();

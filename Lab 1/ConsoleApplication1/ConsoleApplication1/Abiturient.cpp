@@ -55,9 +55,14 @@ int Abiturient::get_mark(){
 	return Abiturient::mark;
 }
 void Abiturient::get_BadAbiturient(){
-	std::cout << "id" << " Ôàìèëèÿ" << "\tÈìÿ" << "\tÎò÷åñòâî" << "\tÁàëë" << std::endl;
 	if (Abiturient::get_mark() < 100){
-		std::cout << Abiturient::get_id()<< "   " << Abiturient::get_lastName() << "\t" << Abiturient::get_name() << "\t" << Abiturient::get_patronymic() << "\t" << Abiturient::get_mark() << std::endl;
+		std::cout << Abiturient::get_id() << "   " << Abiturient::get_lastName() << "\t" << Abiturient::get_name() << "\t" << Abiturient::get_patronymic() << "\t" << Abiturient::get_mark() << std::endl << std::endl;
+	}
+}
+void Abiturient::get_ValAbiturient(int N){
+	bal = N;
+	if (Abiturient::get_mark() > bal){
+		std::cout << Abiturient::get_id() << "   " << Abiturient::get_lastName() << "\t" << Abiturient::get_name() << "\t" << Abiturient::get_patronymic() << "\t" << Abiturient::get_mark() << std::endl << std::endl;
 	}
 }
 Abiturient::~Abiturient(){

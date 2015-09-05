@@ -15,6 +15,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	int n;
+	int bal;
 	std::cout << "Количество абитуриентов" << std::endl;
 	std::cin >> n;
 	Abiturient *abitur = new Abiturient[n];
@@ -54,9 +55,21 @@ int _tmain(int argc, _TCHAR* argv[])
 		std::cin >> s_mark;
 		abitur[i].set_mark(s_mark);
 
-		abitur[i].get_BadAbiturient();
-
 	}
+	std::cout << "Cписок абитуриентов, имеющих неудовлетворительные оценки: " << std::endl << std::endl;
+	std::cout << "id" << " Фамилия" << "\tИмя" << "\tОтчество" << "\tБалл" << std::endl;
+	for (int i = 0; i < n; i++){
+		abitur[i].get_BadAbiturient();
+	}
+	std::cout << "Введите балл выше которго нужно вывести абитуриентов: "; 
+	std::cin >> bal;
+	std::cout << "Cписок абитуриентов, у которых сумма баллов выше заданной: " << std::endl << std::endl;
+	std::cout << "id" << " Фамилия" << "\tИмя" << "\tОтчество" << "\tБалл" << std::endl;
+	for (int i = 0; i < n; i++){
+		abitur[i].get_ValAbiturient(bal);
+	}
+
+
 
 	delete [] abitur;
 	system("pause");
