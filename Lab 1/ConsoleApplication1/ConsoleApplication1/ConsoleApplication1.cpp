@@ -9,7 +9,51 @@
 #include <windows.h>
 #include "Abiturient.h"
 
+void get_BadAbiturient(Abiturient A[],int n){
+	std::cout << "Cписок абитуриентов, имеющих неудовлетворительные оценки: " << std::endl << std::endl;
+	std::cout << "id" << "  Фамилия" << std::setw(10) << "Имя" << std::setw(18) << " Отчество" << std::setw(5) << "ЦТ" << "  " << "Аттестат" << "  " << "Сумма" << std::endl;
+	for (int i = 0; i < n; i++){
+		if (A[i].get_mark_a() < 100 || A[i].get_mark_b() < 50){
+			A[i].print();
+		}
+	}
+	std::cout << "____________________________________________________________" << std::endl << std::endl;
+}
 
+void get_ValAbiturient(Abiturient A[], int b, int n){
+	std::cout << "Cписок абитуриентов, у которых сумма баллов выше заданной (350): " << std::endl << std::endl;
+	std::cout << "id" << "  Фамилия" << std::setw(10) << "Имя" << std::setw(18) << " Отчество" << std::setw(5) << "ЦТ" << "  " << "Аттестат" << "  " << "Сумма" << std::endl;
+	for (int i = 0; i < n - 1; i++){
+		if (A[i].get_mark_s() > b){
+			A[i].print();
+		}
+	}
+	std::cout << "____________________________________________________________" << std::endl << std::endl;
+}
+void get_bestAbiturent(Abiturient A[],int b, int n, int sa[]){
+	std::cout << "Cписок абитуриентов, имеющих самую высокую сумму баллов: " << std::endl << std::endl;
+	for (int i = 0; i < n - 1; i++){
+		sa[i] = A[i].get_mark_s();
+	}
+	for (int i = n - 2; i >= 0; i--)
+	{
+		for (int j = 0; j < i; j++)
+		{
+			if (sa[j] > sa[j + 1])
+			{
+				std::swap(sa[j], sa[j + 1]);
+			}
+		}
+	}
+
+	std::cout << "id" << "  Фамилия" << std::setw(10) << "Имя" << std::setw(18) << " Отчество" << std::setw(5) << "ЦТ" << "  " << "Аттестат" << "  " << "Сумма" << std::endl;
+	for (int i = 0; i < n - 1; i++){
+		if (A[i].get_mark_s() >= b){
+			A[i].print();
+		}
+	}
+	std::cout << "____________________________________________________________" << std::endl << std::endl;
+}
 int _tmain(int argc, _TCHAR* argv[])
 {
 	setlocale(LC_ALL, "Russian");
@@ -94,90 +138,31 @@ int _tmain(int argc, _TCHAR* argv[])
 			}
 			abitur[i].set_mark_b(s_mark_b);
 		}
-		std::cout << "Cписок абитуриентов, имеющих неудовлетворительные оценки: " << std::endl << std::endl;
-		std::cout << "id" << "  Фамилия" << std::setw(10) << "Имя" << std::setw(18) << " Отчество" << std::setw(5) << "ЦТ" << "  " << "Аттестат" << "  " << "Сумма" << std::endl;
-		for (int i = 0; i < n; i++){
-			abitur[i].get_BadAbiturient();
-		}
-		std::cout << "____________________________________________________________" << std::endl << std::endl;
 
-		std::cout << "Введите балл выше которго нужно вывести абитуриентов: ";
-		std::cin >> bal;
-		std::cout << "Cписок абитуриентов, у которых сумма баллов выше заданной: " << std::endl << std::endl;
-		std::cout << "id" << "  Фамилия" << std::setw(10) << "Имя" << std::setw(18) << " Отчество" << std::setw(5) << "ЦТ" << "  " << "Аттестат" << "  " << "Сумма" << std::endl;
-		for (int i = 0; i < n; i++){
-			abitur[i].get_ValAbiturient(bal);
-		}
-		std::cout << "____________________________________________________________" << std::endl << std::endl;
+		get_BadAbiturient(abitur, n);
 
-		std::cout << "Введите число абитуриентов, имеющих самую высокую сумму баллов" << std::endl;
-		std::cin >> kolAbitur;
-		for (int i = 0; i < n; i++){
-			sumAbitur[i] = abitur[i].get_mark_s();
-		}
-		for (int i = n - 1; i >= 0; i--)
-		{
-			for (int j = 0; j < i; j++)
-			{
-				if (sumAbitur[j] > sumAbitur[j + 1])
-				{
-					std::swap(sumAbitur[j], sumAbitur[j + 1]);
-				}
-			}
-		}
-		std::cout << "Cписок абитуриентов, имеющих самую высокую сумму баллов: " << std::endl << std::endl;
-		std::cout << "id" << "  Фамилия" << std::setw(10) << "Имя" << std::setw(18) << " Отчество" << std::setw(5) << "ЦТ" << "  " << "Аттестат" << "  " << "Сумма" << std::endl;
-		for (int i = 0; i < kolAbitur; i++){
-			abitur[i].get_bestAbiturent(sumAbitur[kolAbitur+1]);
-		}
-		std::cout << "____________________________________________________________" << std::endl << std::endl;
+
 
 		delete[] abitur;
 	}
 	else{
-		Abiturient abitur[5];
-		int sumAbitur[4];
+		const int SIZE = 5;
+		Abiturient abitur[SIZE];
+		int Sum[4];
 		abitur[0] = Abiturient(0, "Самаль", "Антон", "Дмитриевич", "Сморгонь", "447077796", 237, 78);
 		abitur[1] = Abiturient(1, "Шатило", "Александр", "Александрович", "Жодишки", "123456789", 300, 90);
 		abitur[2] = Abiturient(2, "Хворостенко", "Александр", "Сергеевич", "Минск", "987654321", 200, 30);
 		abitur[3] = Abiturient(3, "Самаль", "Светлана", "Дмитриевна", "Минск", "7667236", 300, 100);
 		Abiturient c_abitur = abitur[3];
 
-		std::cout << "Cписок абитуриентов, имеющих неудовлетворительные оценки: " << std::endl << std::endl;
-		std::cout << "id" << "  Фамилия" << std::setw(10) << "Имя" << std::setw(18) << " Отчество" << std::setw(5) << "ЦТ" << "  " << "Аттестат" << "  " << "Сумма" << std::endl;
-		for (int i = 0; i < 4; i++){
-			abitur[i].get_BadAbiturient();
-		}
-		std::cout << "____________________________________________________________" << std::endl << std::endl;
+		get_BadAbiturient(abitur, SIZE);
 
-		std::cout << "Cписок абитуриентов, у которых сумма баллов выше заданной (350): " << std::endl << std::endl;
-		std::cout << "id" << "  Фамилия" << std::setw(10) << "Имя" << std::setw(18) << " Отчество" << std::setw(5) << "ЦТ" << "  " << "Аттестат" << "  " << "Сумма" << std::endl;
-		for (int i = 0; i < 4; i++){
-			abitur[i].get_ValAbiturient(350);
-		}
-		std::cout << "____________________________________________________________" << std::endl << std::endl;
+		get_ValAbiturient(abitur, 350, SIZE);
+
+		get_bestAbiturent(abitur, 350, SIZE, Sum);
 
 
-		std::cout << "Cписок абитуриентов, имеющих самую высокую сумму баллов: " << std::endl << std::endl;
-		for (int i = 0; i < 4; i++){
-			sumAbitur[i] = abitur[i].get_mark_s();
-		}
-		for (int i = 3; i >= 0; i--)
-		{
-			for (int j = 0; j < i; j++)
-			{
-				if (sumAbitur[j] > sumAbitur[j + 1])
-				{
-					std::swap(sumAbitur[j], sumAbitur[j + 1]);
-				}
-			}
-		}
 
-		std::cout << "id" << "  Фамилия" << std::setw(10) << "Имя" << std::setw(18) << " Отчество" << std::setw(5) << "ЦТ" << "  " << "Аттестат" << "  " << "Сумма" << std::endl;
-		for (int i = 0; i < 4; i++){
-			abitur[i].get_bestAbiturent(sumAbitur[2]);
-		}
-		std::cout << "____________________________________________________________" << std::endl << std::endl;
 	}
 
 

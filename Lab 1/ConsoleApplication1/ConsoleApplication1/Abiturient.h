@@ -37,7 +37,6 @@ public:
 	int get_mark_b();
 	int get_mark_s();
 
-	void get_BadAbiturient();
-	void get_ValAbiturient(int);
-	void get_bestAbiturent(int);
+	void print();
 };
+

@@ -96,19 +96,7 @@ int Abiturient::get_mark_b(){
 int Abiturient::get_mark_s(){
 	return Abiturient::mark_a + Abiturient::mark_b;
 }
-void Abiturient::get_BadAbiturient(){
-	if (Abiturient::get_mark_a() < 100 || Abiturient::get_mark_b() < 50){
-		std::cout << Abiturient::get_id() << "   " << Abiturient::get_lastName() << "   " << Abiturient::get_name() << "   " << Abiturient::get_patronymic() << "\t  " << Abiturient::get_mark_a() << "   " << Abiturient::get_mark_b() << "\t " << Abiturient::get_mark_s()<< std::endl;
-	}
-}
-void Abiturient::get_ValAbiturient(int N){
-	if (Abiturient::get_mark_s() > N){
-		std::cout << Abiturient::get_id() << "   " << Abiturient::get_lastName() << "   " << Abiturient::get_name() << "   " << Abiturient::get_patronymic() << "\t  " << Abiturient::get_mark_a() << "   " << Abiturient::get_mark_b() << "\t " << Abiturient::get_mark_s() << std::endl;
-	}
-}
-void Abiturient::get_bestAbiturent(int N){
-	if (Abiturient::get_mark_s() >= N){
-		std::cout << Abiturient::get_id() << "   " << Abiturient::get_lastName() << "   " << Abiturient::get_name() << "   " << Abiturient::get_patronymic() << "\t  " << Abiturient::get_mark_a() << "   " << Abiturient::get_mark_b() << "\t " << Abiturient::get_mark_s() << std::endl;
-	}
-}
 
+void Abiturient::print(){
+	std::cout << Abiturient::get_id() << "   " << Abiturient::get_lastName() << "   " << Abiturient::get_name() << "   " << Abiturient::get_patronymic() << "\t  " << Abiturient::get_mark_a() << "   " << Abiturient::get_mark_b() << "\t " << Abiturient::get_mark_s() << std::endl;
+}
