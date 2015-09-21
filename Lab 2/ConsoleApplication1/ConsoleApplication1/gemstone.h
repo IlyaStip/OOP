@@ -1,14 +1,13 @@
 #include "stdafx.h"
 #include <iostream>
-#include <string.h>
 #include "Stone.h"
 
 class Gemstone : public Stone
 {
-	std::string color;
+	char* color;
 public:
 	Gemstone();
-	void setColor(std::string);
+	void setColor(char*);
 	void getColor();
 	~Gemstone();
 };
