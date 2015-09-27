@@ -13,7 +13,7 @@ void Sardius::setHardness(int HARDNESS)
 
 void Sardius::getHardness()
 {
-	std::cout << "Твердость: " << hardness;
+	std::cout << "Твердость: " << hardness << std::endl;
 }
 
 Sardius::~Sardius()

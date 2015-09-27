@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include "Emerald.h"
+#include "Gem.h"
 
 Emerald::Emerald()
 {

@@ -1,8 +1,9 @@
+#pragma once
 #include "stdafx.h"
 #include <iostream>
-#include "Stone.h"
+#include "gemstone.h"
 
-class Sardius : public Stone
+class Sardius : public Gemstone
 {
 	int hardness;
 public:

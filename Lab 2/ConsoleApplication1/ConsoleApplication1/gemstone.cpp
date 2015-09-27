@@ -14,7 +14,7 @@ void Gemstone::setColor(char* COLOR)
 
 void Gemstone::getColor()
 {
-	std::cout << "Цвет: " << color;
+	std::cout << "Цвет: " << color << std::endl;
 }
 
 Gemstone::~Gemstone()

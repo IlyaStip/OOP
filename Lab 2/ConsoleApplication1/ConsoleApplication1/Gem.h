@@ -1,5 +1,5 @@
+#pragma once
 #include "stdafx.h"
-#include <iostream>
 #include "Stone.h"
 
 class Gem : public Stone
