@@ -5,20 +5,43 @@
 
 Emerald::Emerald()
 {
-	std::cout << "Конструктор изумруда" << std::endl;
+	std::cout << "Конструктор изумруда без параметров" << std::endl;
 }
 
+Emerald::Emerald(char* NAME, int WEIGHT, int DENSITY) :Gem(NAME, WEIGHT)
+{
+
+	density = DENSITY;
+}
 void Emerald::setDensity(int DENSITY)
 {
 	density = DENSITY;
 }
 
-void Emerald::getDensity()
+int Emerald::getDensity()
 {
-	std::cout << "Плотность: " << density << std::endl;
+	return density;
 }
+
 
 Emerald::~Emerald()
 {
 	std::cout << "Деструктор изумруда" << std::endl;
+}
+
+void Emerald::print()
+{
+	std::cout << "Имя: " << getName() << std::endl;
+	std::cout << "Вес: " << getWeight() << std::endl;
+	std::cout << "Плотность: " << getDensity() << std::endl;
+}
+
+void Emerald::show()
+{
+	Stone *p = head;
+	while (p)
+	{
+		p->print();
+		p = p->next;
+	}
 }

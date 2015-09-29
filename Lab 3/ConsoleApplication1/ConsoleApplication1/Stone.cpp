@@ -5,20 +5,18 @@
 
 Stone::Stone(void)
 {
-	std::cout << "Конструктор камня" << std::endl;
+	std::cout << "Конструктор камня без параметров" << std::endl;
 }
 
-void Stone::setName(char* NAME)
+Stone::Stone(char* NAME)
 {
 	name = NAME;
+	std::cout << "Конструктор камня с параметрами" << std::endl;
 }
 
-void Stone::getName()
-{
-	std::cout << "Имя камня: " << name << std::endl;
-}
-
-Stone::~Stone()
+Stone::~Stone(void)
 {
 	std::cout << "Деструктор камня" << std::endl;
 }
+
+Stone *Stone::head = NULL;

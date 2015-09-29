@@ -5,10 +5,16 @@
 
 class Emerald : public Gem
 {
+protected:
 	int density;
 public:
-	Emerald();
+	Emerald(void);
+	Emerald(char*, int, int);
+
 	void setDensity(int);
-	void getDensity();
-	~Emerald();
+	int getDensity();
+
+	void print(void);
+	void show(void);
+	~Emerald(void);
 };

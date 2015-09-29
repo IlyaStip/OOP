@@ -5,10 +5,16 @@
 
 class Sardius : public Gemstone
 {
+protected:
 	int hardness;
 public:
-	Sardius();
+	Sardius(void);
+	Sardius(char*, char*, int);
+
 	void setHardness(int);
-	void getHardness();
-	~Sardius();
+	int getHardness();
+
+	void print(void);
+	void show(void);
+	~Sardius(void);
 };
