@@ -31,13 +31,6 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	a.show();
 
-
-
-
-
-
-
-
 	system("pause");
 	return 0;
 };
