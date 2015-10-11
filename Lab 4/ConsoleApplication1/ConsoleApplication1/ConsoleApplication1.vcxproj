@@ -82,6 +82,7 @@
     <ClInclude Include="Emerald.h" />
     <ClInclude Include="Gem.h" />
     <ClInclude Include="gemstone.h" />
+    <ClInclude Include="Necklace.h" />
     <ClInclude Include="sardius.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stone.h" />
@@ -92,6 +93,7 @@
     <ClCompile Include="Emerald.cpp" />
     <ClCompile Include="Gem.cpp" />
     <ClCompile Include="gemstone.cpp" />
+    <ClCompile Include="Necklace.cpp" />
     <ClCompile Include="sardius.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

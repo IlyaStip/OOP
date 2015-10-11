@@ -11,16 +11,18 @@ protected:
 public:
 	Gemstone *next;
 	Gemstone(void);
-	Gemstone(char*, char*,int,int);
+	Gemstone(char*, char*,int,int,float);
 
 	virtual void setName(char*);
 	virtual void setColor(char*);
 	virtual void setWeight(int);
 	virtual void setCost(int);
+	virtual void setOpacity(float);
 	virtual char* getColor();
 	virtual char* getName()const;
 	virtual int getWeight()const;
 	virtual int getCost()const;
+	virtual float getOpacity()const;
 
 	void print(void);
 	static void show();

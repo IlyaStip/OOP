@@ -7,10 +7,11 @@ Gem::Gem(void)
 	std::cout << "Конструктор драгоценного камня без параметров" << std::endl;
 }
 
-Gem::Gem(char* Name, int Weight, int Cost) : Stone(Name,Cost)
+Gem::Gem(char* Name, int Weight, int Cost, float OPACITY) : Stone(Name,Cost,OPACITY)
 {
 	weight = Weight;
 	cost = Cost;
+	opacity = OPACITY;
 	std::cout << "Конструктор драгоценного камня с параметрами" << std::endl;
 }
 
@@ -28,6 +29,11 @@ void Gem::setCost(int COST)
 	cost = COST;
 }
 
+void Gem::setOpacity(float OPACITY)
+{
+	opacity = OPACITY;
+}
+
 int Gem::getWeight()
 {
 	return  weight;
@@ -43,6 +49,11 @@ int Gem::getCost() const
 	return cost;
 }
 
+float Gem::getOpacity()const
+{
+	return opacity;
+}
+
 Gem::~Gem()
 {
 	std::cout << "Деструктор драгоценного камня" << std::endl;
@@ -53,6 +64,7 @@ void Gem::print()
 	std::cout << "Имя: " << getName() << std::endl;
 	std::cout << "Вес: " << getWeight() << std::endl;
 	std::cout << "Стоимость: " << getCost() << std::endl;
+	std::cout << "Прозрачность: " << getOpacity() << std::endl;
 }
 
 void Gem::show()

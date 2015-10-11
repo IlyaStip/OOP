@@ -7,11 +7,12 @@ Gemstone::Gemstone()
 	std::cout << "Конструктор полудрагоценного камня без параметров" << std::endl;
 }
 
-Gemstone::Gemstone(char* NAME, char* COLOR, int WEIGHT, int COST) :Stone(NAME,COST)
+Gemstone::Gemstone(char* NAME, char* COLOR, int WEIGHT, int COST,float OPACITY) :Stone(NAME,COST,OPACITY)
 {
 	color = COLOR;
 	weight = WEIGHT;
 	cost = COST;
+	opacity = OPACITY;
 	std::cout << "Конструктор полудрагоценного камня с пераметрами" << std::endl;
 }
 
@@ -35,6 +36,11 @@ void Gemstone::setCost(int COST)
 	cost = COST;
 }
 
+void Gemstone::setOpacity(float OPACITY)
+{
+	opacity = OPACITY;
+}
+
 char* Gemstone::getColor()
 {
 	return color;
@@ -55,6 +61,11 @@ int Gemstone::getCost() const
 	return cost;
 }
 
+float Gemstone::getOpacity() const
+{
+	return opacity;
+}
+
 Gemstone::~Gemstone()
 {
 	std::cout << "Деструктор полудрагоценного камня" << std::endl;
@@ -66,6 +77,7 @@ void Gemstone::print()
 	std::cout << "Цвет: " << getColor() << std::endl;
 	std::cout << "Вес: " << getWeight() << std::endl;
 	std::cout << "Стоимость: " << getCost() << std::endl;
+	std::cout << "Прозрачность: " << getOpacity() << std::endl;
 }
 
 void Gemstone::show()

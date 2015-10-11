@@ -8,10 +8,11 @@ Stone::Stone(void)
 	std::cout << "Конструктор камня без параметров" << std::endl;
 }
 
-Stone::Stone(char* NAME,int COST)
+Stone::Stone(char* NAME,int COST,float OPACITY)
 {
 	name = NAME;
 	cost = COST;
+	opacity = OPACITY;
 	std::cout << "Конструктор камня с параметрами" << std::endl;
 }
 
