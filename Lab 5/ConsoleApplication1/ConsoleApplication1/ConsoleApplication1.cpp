@@ -18,21 +18,22 @@ int _tmain(int argc, _TCHAR* argv[])
 	cin >> Col;
 	Matrix Matrix1(Row, Col);
 	Matrix1.Fill();
-	Matrix1.Display();
+	Matrix1.Show();
 	cout << endl;
 
 	Matrix Matrix2(Row, Col);
 	Matrix2.Fill();
-	Matrix2.Display();
+	Matrix2.Show();
 
 	cout << "Сумма матриц" << endl;
-	Matrix1 + Matrix2;
-	Matrix1.Display();
+	//Matrix1 + Matrix2;
+	Matrix a = Matrix1 + Matrix2;
+	Matrix1.Show();
 
 	cout << endl;
 	cout << "обнуление всех элементов матрицы" << endl;
 	Matrix2--;
-	Matrix2.Display();
+	Matrix2.Show();
 	cout << endl;
 
 	if (Matrix1 == Matrix2) cout << "Равны" << endl;
