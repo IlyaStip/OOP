@@ -17,12 +17,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout << "Введите количество столбцов: ";
 	cin >> Col;
 	Matrix Matrix1(Row, Col);
-	Matrix1.SetValue(0, 0, 0);
+	Matrix1.Fill();
 	Matrix1.Display();
 	cout << endl;
 
 	Matrix Matrix2(Row, Col);
-	Matrix2.SetValue(0, 0, 0);
+	Matrix2.Fill();
 	Matrix2.Display();
 
 	cout << "Сумма матриц" << endl;
@@ -30,13 +30,16 @@ int _tmain(int argc, _TCHAR* argv[])
 	Matrix1.Display();
 
 	cout << endl;
-
+	cout << "обнуление всех элементов матрицы" << endl;
 	Matrix2--;
 	Matrix2.Display();
 	cout << endl;
 
 	if (Matrix1 == Matrix2) cout << "Равны" << endl;
 	else cout << "Не равны" << endl;
+
+	cout << Matrix1() << endl;
+
 	system("pause");
 	return 0;
 }

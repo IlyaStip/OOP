@@ -30,31 +30,16 @@ Matrix::~Matrix()
 	delete[] value;
 };
 
-void Matrix::SetValue(int Rows, int Cols, int Value)
-{
-	if (Rows < 0 || Rows > rows)
-		Rows = 0;
-	if (Cols < 0 || Cols > cols)
-		Cols = 0;
-	value[Rows][Cols] = Value;
-}
 
-int Matrix::GetValue(int Rows, int Cols)
-{
-	if (Rows < 0 || Rows > rows)
-		Rows = 0;
-	if (Cols < 0 || Cols > cols)
-		Cols = 0;
-	return value[Rows][Cols];
-};
 
 void Matrix::Fill()
 {
+	
 	for (int i = 0; i<rows; i++)
 	{
 		for (int j = 0; j<cols; j++)
 		{
-			value[i][j] = (int)rand();
+			value[i][j] = (int)rand()% 10 - (10/2);
 		}
 	}
 	return;

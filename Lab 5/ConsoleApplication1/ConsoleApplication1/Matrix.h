@@ -9,8 +9,6 @@ class Matrix
 public:
 	Matrix(int Rows, int Cols);
 	~Matrix();
-	void SetValue(int Rows, int Cols, int Value);
-	int GetValue(int Rows, int Cols);
 	void Fill();
 	void Display();
 	friend void operator+(Matrix& x, Matrix& y)
@@ -21,7 +19,6 @@ public:
 			{
 				x.value[i][j] = x.value[i][j] + y.value[i][j];
 			}
-			cout << endl;
 		}
 	}
 
@@ -46,4 +43,20 @@ public:
 			cout << endl;
 		}
 	}
+	int operator ()()
+	{
+		int min = 0;
+		for (int i = 0; i<this->rows; i++)
+		{
+			for (int j = 0; j<this->cols; j++)
+			{
+				if (this->value[i][j] < 0) min++;
+			}
+			cout << endl;
+		}
+		return min;
+	}
+
 };
+
+
