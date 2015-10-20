@@ -77,8 +77,6 @@ build/
 *.pidb
 *.log
 *.scc
-*.filters
-*.vcxproj
 
 # Visual C++ cache files
 ipch/
@@ -216,3 +214,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.vcxproj
+*.filters
