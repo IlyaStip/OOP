@@ -60,7 +60,7 @@ void Matrix<T>::Fill()
 	{
 		for (int j = 0; j<cols; j++)
 		{
-			value[i][j] = (T)rand();
+			value[i][j] = (int)rand();
 		}
 	}
 }

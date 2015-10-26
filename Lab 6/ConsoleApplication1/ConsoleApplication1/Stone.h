@@ -13,7 +13,8 @@ public:
 	Stone operator+(Stone &a);
 	bool operator<(int a);
 	bool operator!=(Stone &a);
-	void operator<<(Stone &a);
+	void operator=(int a);
+	friend std::ostream& operator<<(std::ostream &stream, const Stone &value) { return stream << value.cost; }
 	void setName(char*);
 	void setCost(int);
 	int getCost();
