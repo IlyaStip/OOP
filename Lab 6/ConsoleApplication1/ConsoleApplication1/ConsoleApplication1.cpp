@@ -117,15 +117,12 @@ bool Matrix<T>::operator==(Matrix& a)
 template<class T>
 void Matrix<T>::operator-(Matrix& a)
 {
-	for (int i = 0; i<a.rows; i++)
-	{
 
-		for (int j = 0; j<a.cols; j++)
+		for (int j = 0,i =0; i<a.cols; i++)
 		{
 			a.value[i][j] = 0;
 		}
 		cout << endl;
-	}
 }
 
 
