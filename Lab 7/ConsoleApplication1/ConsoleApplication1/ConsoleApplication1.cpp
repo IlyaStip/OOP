@@ -10,9 +10,9 @@ using namespace std;
 template<class T>
 class Matrix
 {
+public:
 	int rows, cols;
 	T **value;
-public:
 	Matrix(int Rows, int Cols);
 	~Matrix();
 	void Fill();
@@ -129,7 +129,16 @@ void Matrix<T>::operator-(Matrix& a)
 template<class T>
 void zeroing(T x, int a)
 {
-	
+	for (int i = 0; i<x.rows; i++)
+	{
+		for (int j = 0; j<x.cols; j++)
+		{
+			if (x.value[i][j] == a)
+			{
+				x.value[i][j] = 0;
+			}
+		}
+	}
 }
 
 
@@ -160,6 +169,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	Matrix2.Show();
 	cout << endl;
 
+	cout << "Функция" << endl;
 	zeroing(Matrix1, 19210);
 	Matrix1.Show();
 

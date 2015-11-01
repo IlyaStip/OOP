@@ -59,6 +59,11 @@ bool Stone::operator!=(Stone &a)
 	return this->cost != a.cost;
 }
 
+bool Stone::operator==(int a)
+{
+	return this->cost == a;
+}
+
 void Stone::operator=(int a)
 {
 	this->cost = a;
