@@ -54,6 +54,7 @@ bool Stone::operator<(int a)
 	return this->cost < a;
 }
 
+
 bool Stone::operator!=(Stone &a)
 {
 	return this->cost != a.cost;
