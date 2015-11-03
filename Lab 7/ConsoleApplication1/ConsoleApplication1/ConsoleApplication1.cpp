@@ -142,6 +142,7 @@ void zeroing(T x, int a)
 }
 
 
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	setlocale(LC_ALL, "Russian");
