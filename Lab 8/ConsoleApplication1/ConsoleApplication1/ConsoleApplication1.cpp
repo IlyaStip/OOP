@@ -167,6 +167,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		//Matrix1.Show();
 		cout << endl;
 
+
 		Matrix<Stone> Matrix2(Row, Col);
 		Matrix2.Fill();
 		//Matrix2.Show();
