@@ -33,17 +33,24 @@ public:
 template<class T>
 Matrix<T>::Matrix(int ROWS, int COLS)
 {
-	if (ROWS < 0) throw NegativeNumberError("Число строк или столбцов не может быть меньше 0!");
-	rows = ROWS;
-	cols = COLS;
-	value = new T *[rows];
-	for (int i = 0; i<rows; i++)
+	try
 	{
-		value[i] = new T[cols];
-		for (int j = 0; j<cols; j++)
+		if (ROWS <= 0 || COLS <= 0) throw NegativeNumberError("Число строк или столбцов не может быть меньше 0!");
+		rows = ROWS;
+		cols = COLS;
+		value = new T *[rows];
+		for (int i = 0; i < rows; i++)
 		{
-			value[i][j] = 0;
+			value[i] = new T[cols];
+			for (int j = 0; j < cols; j++)
+			{
+				value[i][j] = 0;
+			}
 		}
+	}
+	catch (NegativeNumberError e)
+	{
+		e.show();
 	}
 }
 
@@ -86,14 +93,20 @@ int Matrix<T>::operator()()
 template<class T>
 void Matrix<T>::Show()
 {
-	if (value[0][0] == 0) throw EmptyObjectError("Пустой объект!");
-	for (int i = 0; i<rows; i++)
-	{
-		for (int j = 0; j<cols; j++)
+	try{
+		if (value[0][0] == 0) throw EmptyObjectError("Пустой объект!");
+		for (int i = 0; i < rows; i++)
 		{
-			cout << value[i][j] << "  ";
+			for (int j = 0; j < cols; j++)
+			{
+				cout << value[i][j] << "  ";
+			}
+			cout << endl;
 		}
-		cout << endl;
+	}
+	catch (EmptyObjectError e)
+	{
+		e.show();
 	}
 }
 
@@ -113,10 +126,17 @@ void Matrix<T>::operator+(Matrix& b)
 template<class T>
 bool Matrix<T>::operator==(Matrix& a)
 {
-	for (int j = 0; j<a.cols; j++)
+	try
 	{
-		if (this->value[0][j] != a.value[0][j]) return false;
-		else throw NotEquallyError("Не равны!");
+		for (int j = 0; j < a.cols; j++)
+		{
+			if (this->value[0][j] != a.value[0][j]) throw NotEquallyError("Не равны!");
+			else return true;
+		}
+	}
+	catch (NotEquallyError e)
+	{
+		e.show();
 	}
 }
 
@@ -135,8 +155,7 @@ void Matrix<T>::operator-(Matrix& a)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	try
-	{
+
 		setlocale(LC_ALL, "Russian");
 		int Row, Col;
 		cout << "Введите количество столбцов: ";
@@ -145,12 +164,14 @@ int _tmain(int argc, _TCHAR* argv[])
 		cin >> Col;
 		Matrix<Stone> Matrix1(Row, Col);
 		Matrix1.Fill();
-		Matrix1.Show();
+		//Matrix1.Show();
 		cout << endl;
 
 		Matrix<Stone> Matrix2(Row, Col);
 		Matrix2.Fill();
-		Matrix2.Show();
+		//Matrix2.Show();
+
+		if (Matrix1 == Matrix2) cout << "Равны" << endl;
 
 		Matrix<Stone> Matrix3(Row, Col);
 		Matrix3.Show();
@@ -165,26 +186,10 @@ int _tmain(int argc, _TCHAR* argv[])
 		Matrix2.Show();
 		cout << endl;
 
-		if (Matrix1 == Matrix2) cout << "Равны" << endl;
-		else cout << "Не равны" << endl;
+		
+		//else cout << "Не равны" << endl;
 
 		cout << Matrix1() << endl;
-
-		
-	}
-	catch (NegativeNumberError e)
-	{
-		e.show();
-	}
-	catch (EmptyObjectError e)
-	{
-		e.show();
-	}
-	catch (NotEquallyError e)
-	{
-		e.show();
-	}
-
 
 
 	system("pause");
