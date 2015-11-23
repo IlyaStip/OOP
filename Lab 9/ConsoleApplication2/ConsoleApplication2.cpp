@@ -22,7 +22,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	std::cout << vectors[1] << std::endl << std::endl;
 
 	std::vector<int>::iterator p = vectors.begin();
-	while (p != vectors.end()) 
+	while (p != vectors.end())
 	{
 		std::cout << *p << std::endl << std::endl;
 		p++;
@@ -37,9 +37,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	auto a = vectors.begin();
 
-	auto  b = vectors.begin()+2;
+	auto  b = vectors.begin() + 2;
 
-	vectors.erase(a,b);
+	vectors.erase(a, b);
 
 
 	std::vector<int>::iterator pp = vectors.begin();
