@@ -1,51 +1,78 @@
 // ConsoleApplication1.cpp: определяет точку входа для консольного приложения.
 //
 
-#include "stdafx.h"
+
 #include <iostream>
+#include "stdafx.h"
+#include "Stone.h"
 #include <vector>
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	using namespace std;
 
-	std::vector<int> vectors;
-	vectors.push_back(1);
-	vectors.push_back(2);
-	vectors.push_back(3);
-	vectors.push_back(4);
-	vectors.push_back(5);
+	Stone stone1("1", 100);
+	Stone stone2("2", 200);
+	Stone stone3("3", 300);
+	Stone stone4("4", 400);
+	Stone stone5("5", 500);
+	Stone stone6("6", 600);
 
-	vectors.pop_back();
 
-	std::cout << vectors[1] << std::endl;
-	vectors[1] = 7;
-	std::cout << vectors[1] << std::endl << std::endl;
+	vector<Stone> Vectors;
+	Vectors.push_back(stone1);
+	Vectors.push_back(stone2);
+	Vectors.push_back(stone3);
+	Vectors.push_back(stone4);
+	Vectors.push_back(stone5);
+	Vectors.push_back(stone6);
+	Vectors.push_back(stone4);
+	Vectors.push_back(stone2);
 
-	std::vector<int>::iterator p = vectors.begin();
-	while (p != vectors.end())
+
+	Vectors.pop_back();
+
+	cout << Vectors[1] << endl;
+	Vectors[1] = 7;
+	cout << Vectors[1] << endl << endl;
+
+	auto p = Vectors.begin();
+
+	cout << "Выод 1" << endl;
+	while (p != Vectors.end())
 	{
-		std::cout << *p << std::endl << std::endl;
+		cout << *p << endl << endl;
 		p++;
 	}
 
 
-	std::vector<int> vectors1;
-	vectors1.push_back(1);
-	vectors1.push_back(2);
-	vectors1.push_back(3);
-	vectors1.push_back(4);
+	vector<Stone> vectors1;
 
-	auto a = vectors.begin();
-
-	auto  b = vectors.begin() + 2;
-
-	vectors.erase(a, b);
+	Stone stone11("1", 100);
+	Stone stone22("2", 200);
+	Stone stone33("3", 300);
+	Stone stone44("764", 400);
 
 
-	std::vector<int>::iterator pp = vectors.begin();
-	while (pp != vectors.end())
+	vectors1.push_back(stone11);
+	vectors1.push_back(stone22);
+	vectors1.push_back(stone33);
+	vectors1.push_back(stone44);
+
+	auto a = Vectors.begin();
+
+	auto  b = Vectors.begin() + 2;
+
+	Vectors.erase(a, b);
+
+
+	vector<Stone>::iterator pp = Vectors.begin();
+
+	cout << "Выод 2" << endl;
+
+	while (pp != Vectors.end())
 	{
-		std::cout << *pp << std::endl;
+		cout << *pp << endl;
 		pp++;
 	};
 
@@ -53,15 +80,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	auto a1 = vectors1.begin();
 
 
-	vectors.insert(vectors.begin(), vectors1.begin(), vectors1.end());
+	Vectors.insert(Vectors.begin(), vectors1.begin(), vectors1.end());
 
-	std::cout << std::endl;
-	std::cout << std::endl;
+	cout << endl;
+	cout << endl;
 
-	std::vector<int>::iterator ppp = vectors.begin();
-	while (ppp != vectors.end())
+	vector<Stone>::iterator ppp = vectors1.begin();
+
+	cout << "Выод 3" << endl;
+
+	while (ppp != vectors1.end())
 	{
-		std::cout << *ppp << std::endl;
+		cout << *ppp << endl;
 		ppp++;
 	};
 
