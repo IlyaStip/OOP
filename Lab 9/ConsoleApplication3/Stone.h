@@ -12,7 +12,8 @@ public:
 	Stone(void);
 	Stone(char*, int);
 	Stone operator+(Stone &a);
-	bool operator<(int a);
+	bool operator< (const Stone& r);
+	bool operator> (const Stone& r);
 	bool operator!=(Stone &a);
 	bool operator==(int a);
 	void operator=(int a);
@@ -23,8 +24,13 @@ public:
 	}
 	void setName(char*);
 	void setCost(int);
-	int getCost();
+	int getCost()const;
 	char* getName();
 	~Stone(void);
+
+	friend bool over(const Stone& lv, const Stone& rv);
+	friend bool less(const Stone& lv, const Stone& rv);
+	friend bool overNum(const Stone& rv);
+	friend bool equal(const Stone& lv, const Stone& rv);
 
 };

@@ -31,12 +31,12 @@ char* Stone::getName()
 	return name;
 }
 
-void Stone::setCost(int COST)
+void Stone::setCost(int COST) 
 {
 	cost = COST;
 }
 
-int Stone::getCost()
+int Stone::getCost() const
 {
 	return this->cost;
 }
@@ -49,10 +49,21 @@ Stone Stone::operator+(Stone &a)
 	return result;
 }
 
-bool Stone::operator<(int a)
-{
-	return this->cost < a;
+bool Stone::operator <(const Stone& r) {
+
+	if (this->getCost()<r.getCost())
+			return true;                                
+	return false;
 }
+
+bool Stone::operator >(const Stone& r) {
+
+
+	if (this->getCost()>r.getCost())
+			return true;                               
+	return false;
+}
+
 
 
 bool Stone::operator!=(Stone &a)
